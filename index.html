@@ -13,12 +13,13 @@
     <main class="container">
         <header class="glass-nav">
             <div class="logo">KEN<span>AI</span></div>
-            <div class="search-box">
-                <input type="text" placeholder="Filter projects..." class="glitch-search">
+            <div class="nav-actions">
+                <input type="text" placeholder="Filter..." class="glitch-search">
             </div>
         </header>
 
         <section class="projects-grid">
+            
             <div class="project-card math-card">
                 <div class="card-content">
                     <span class="tag">Academic</span>
@@ -48,6 +49,7 @@
                     <button class="ghost-btn">Open Tool</button>
                 </div>
             </div>
+
         </section>
 
         <section class="contact-section">
@@ -55,15 +57,15 @@
                 <h2>Get in Touch</h2>
                 <form id="contact-form">
                     <div class="input-group">
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" required autocomplete="off">
                         <label for="name">Your Name</label>
                     </div>
                     <div class="input-group">
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" required autocomplete="off">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="input-group">
-                        <textarea id="message" rows="4" required></textarea>
+                        <textarea id="message" rows="3" required></textarea>
                         <label for="message">Project Brief</label>
                     </div>
                 </form>
