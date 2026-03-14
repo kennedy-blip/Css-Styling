@@ -3,58 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced CSS Styling Showcase</title>
+    <title>Kennedy | Dev Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="background-blobs"></div>
     <div class="background-blobs secondary"></div>
     
-    <main class="glass-card">
-        <header class="search-container">
-            <input type="text" placeholder="Search numerical methods..." class="glitch-search">
+    <main class="container">
+        <header class="glass-nav">
+            <div class="logo">KEN<span>AI</span></div>
+            <div class="search-box">
+                <input type="text" placeholder="Filter projects..." class="glitch-search">
+            </div>
         </header>
 
-        <section class="content">
-            <h1>Numerical Analysis Portal</h1>
-            <p>Showcasing high-precision CSS transitions and glassmorphism layouts for Data Science projects.</p>
+        <section class="projects-grid">
+            
+            <div class="project-card math-card">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="tag">Academic</span>
+                    <h3>Numerical Methods</h3>
+                    <p>Polynomial root finding and finite differences visualized with high precision.</p>
+                    <div class="mini-table">
+                        <div class="row"><span>Iter 01</span> <span>2.501</span></div>
+                        <div class="row"><span>Iter 02</span> <span>2.500</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tool-card">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="tag">Full-Stack</span>
+                    <h3>mesocr</h3>
+                    <p>Real-time encrypted communication hub using WebSockets and FastAPI.</p>
+                    <button class="ghost-btn">View Live</button>
+                </div>
+            </div>
+
+            <div class="project-card hardware-card">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="tag">Android</span>
+                    <h3>SmartTech ADB</h3>
+                    <p>System diagnostic tool for hardware metrics and battery optimization.</p>
+                    <button class="ghost-btn">Open Tool</button>
+                </div>
+            </div>
+
         </section>
 
-        <section class="data-showcase">
-            <div class="table-header">
-                <h3>Iteration Log: Polynomial Roots</h3>
-                <span class="badge">Topic 02</span>
-            </div>
-            <div class="table-wrapper">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Step</th>
-                            <th>Value (x)</th>
-                            <th>Error (%)</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>2.50000</td>
-                            <td>0.042</td>
-                            <td><span class="status-pill">Processing</span></td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>2.50122</td>
-                            <td>0.001</td>
-                            <td><span class="status-pill success">Converged</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <footer class="action-area">
-            <button class="liquid-btn" onclick="triggerEffect()">Run Computation</button>
+        <footer class="glass-footer">
+            <button class="liquid-btn" onclick="triggerEffect()">Initialize System Diagnostic</button>
         </footer>
     </main>
 
