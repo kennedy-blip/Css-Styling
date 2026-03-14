@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Styling Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs"></div>
+    <div class="background-blobs secondary"></div>
+    
+    <main class="glass-card">
+        <header class="search-container">
+            <input type="text" placeholder="Search numerical methods..." class="glitch-search">
+        </header>
+
+        <section class="content">
+            <h1>Numerical Analysis Portal</h1>
+            <p>Showcasing high-precision CSS transitions and glassmorphism layouts for Data Science projects.</p>
+        </section>
+
+        <section class="data-showcase">
+            <div class="table-header">
+                <h3>Iteration Log: Polynomial Roots</h3>
+                <span class="badge">Topic 02</span>
+            </div>
+            <div class="table-wrapper">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Value (x)</th>
+                            <th>Error (%)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>2.50000</td>
+                            <td>0.042</td>
+                            <td><span class="status-pill">Processing</span></td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>2.50122</td>
+                            <td>0.001</td>
+                            <td><span class="status-pill success">Converged</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="action-area">
+            <button class="liquid-btn" onclick="triggerEffect()">Run Computation</button>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* --- Root & Reset --- */
+:root {
+    --primary: #38bdf8;
+    --success: #4ade80;
+    --bg-dark: #0f172a;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-dark);
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #f8fafc;
+    overflow: hidden;
+}
+
+/* --- Dynamic Background --- */
+.background-blobs {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+    filter: blur(60px);
+    border-radius: 50%;
+    z-index: -1;
+    top: 10%;
+    left: 10%;
+}
+
+.secondary {
+    background: radial-gradient(circle, rgba(129, 140, 248, 0.1) 0%, transparent 70%);
+    top: 50%;
+    left: 60%;
+    width: 600px;
+}
+
+/* --- Main Glass Container --- */
+.glass-card {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* --- Element 1: Airy Search --- */
+.glitch-search {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glitch-search:focus {
+    border-color: var(--primary);
+    background: rgba(56, 189, 248, 0.05);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+/* --- Element 2: Technical Table --- */
+.data-showcase { margin: 25px 0; }
+.table-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.badge { font-size: 0.7rem; background: var(--primary); color: var(--bg-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+
+.table-wrapper {
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.styled-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.styled-table th { background: rgba(255,255,255,0.05); padding: 12px; text-align: left; color: #94a3b8; font-weight: 500; }
+.styled-table td { padding: 12px; border-top: 1px solid var(--border); font-family: 'Courier New', monospace; }
+
+.status-pill { padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,0.1); font-size: 0.75rem; }
+.status-pill.success { color: var(--success); background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.2); }
+
+/* --- Element 3: Heavy Button --- */
+.liquid-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: var(--primary);
+    color: var(--bg-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #0284c7;
+    transition: all 0.1s ease;
+}
+
+.liquid-btn:hover { background: #7dd3fc; transform: translateY(-2px); box-shadow: 0 6px 0 #0284c7; }
+.liquid-btn:active { transform: translateY(3px); box-shadow: 0 0 0 #0284c7; }
