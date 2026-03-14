@@ -18,123 +18,82 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    width: 95%;
-    max-width: 1000px;
-    padding: 40px 0;
-    z-index: 1;
+.container { width: 95%; max-width: 1000px; padding: 40px 0; z-index: 1; }
+
+/* --- Navigation & Grid (Condensed for brevity) --- */
+.glass-nav { display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(15px); padding: 20px 30px; border-radius: 20px; border: 1px solid var(--border); margin-bottom: 30px; }
+.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+.logo span { color: var(--primary); }
+.glitch-search { background: var(--glass); border: 1px solid var(--border); padding: 10px 20px; border-radius: 10px; color: white; outline: none; transition: 0.3s; }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+.project-card { background: rgba(30, 41, 59, 0.5); border: 1px solid var(--border); border-radius: 24px; padding: 25px; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.project-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+.tag { font-size: 0.7rem; background: rgba(56, 189, 248, 0.15); color: var(--primary); padding: 4px 10px; border-radius: 50px; font-weight: 600; }
+
+/* --- Contact Section Styling --- */
+.contact-section { margin-top: 50px; margin-bottom: 30px; }
+.contact-glass {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
 }
 
-/* --- Navigation --- */
-.glass-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(15px);
-    padding: 20px 30px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
+.contact-glass h2 { margin-bottom: 30px; font-weight: 700; color: var(--primary); }
+
+.input-group {
+    position: relative;
     margin-bottom: 30px;
 }
 
-.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
-.logo span { color: var(--primary); }
-
-.glitch-search {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    padding: 10px 20px;
-    border-radius: 10px;
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
     color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
     outline: none;
     transition: 0.3s;
 }
 
-.glitch-search:focus { border-color: var(--primary); width: 250px; }
-
-/* --- Grid Layout --- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+.input-group label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    color: #94a3b8;
+    pointer-events: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card {
-    position: relative;
-    background: rgba(30, 41, 59, 0.5);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 25px;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
-}
-
-.tag {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    background: rgba(56, 189, 248, 0.15);
+/* Floating Label Animation */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+    top: -15px;
+    left: 0;
     color: var(--primary);
-    padding: 4px 10px;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.project-card h3 { margin: 15px 0 10px; font-size: 1.3rem; }
-.project-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.5; margin-bottom: 20px; }
-
-/* --- Mini Table Styling --- */
-.mini-table {
-    background: rgba(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 10px;
-    font-family: monospace;
     font-size: 0.8rem;
+    font-weight: bold;
 }
-.row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.input-group input:focus, .input-group textarea:focus {
+    border-bottom: 1px solid var(--primary);
+}
 
 /* --- Buttons --- */
 .liquid-btn {
-    width: 100%;
-    padding: 18px;
-    border-radius: 15px;
-    border: none;
+    width: 100%; padding: 18px; border-radius: 15px; border: none;
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: var(--bg-dark);
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-    transition: 0.2s;
+    color: var(--bg-dark); font-weight: 800; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3); transition: 0.2s;
 }
-
-.liquid-btn:active { transform: scale(0.98); }
-
-.ghost-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-.ghost-btn:hover { background: var(--border); }
+.liquid-btn:hover { filter: brightness(1.1); }
 
 /* --- Background Blobs --- */
-.background-blobs {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
-    z-index: 0;
-    top: -100px;
-    left: -100px;
-}
+.background-blobs { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); z-index: 0; top: -100px; left: -100px; pointer-events: none;}
 .secondary { top: 60%; left: 70%; background: radial-gradient(circle, rgba(129, 140, 248, 0.05) 0%, transparent 70%); }
